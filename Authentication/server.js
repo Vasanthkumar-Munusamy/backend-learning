@@ -5,6 +5,7 @@ const UserRouter = require("./routes/user.routes");
 const app = express();
 const PORT = process.env.PORT;
 
+app.use(express.json());
 
 app.get("/test", (req, res) => {
     res.status(200).json({ status_code: 200, message: "Test is successfull." });
