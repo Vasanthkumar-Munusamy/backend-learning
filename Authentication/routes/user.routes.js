@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const UserModel = require("../models/user.model");
 const saltRounds = 10;
 
-UserRouter.post("/", (req, res) => {
+UserRouter.post("/signup", (req, res) => {
   console.log(req.body);
   try {
     let myPlaintextPassword = req.body.password;
